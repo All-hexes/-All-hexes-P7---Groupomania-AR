@@ -13,7 +13,6 @@ exports.writePost = (req, res, next) => {
     postObject._userId;
     const post = new Post({
         ...postObject,
-        imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`,
         likes: 0,
         dislikes: 0,
         usersLiked: [],
@@ -62,7 +61,7 @@ exports.modifyPost = (req, res, next) => {
 };
 
 exports.deletePost = (req, res, next) => {
-    Sauce.findOne({ _id: req.params.id }).then((post) => {
+    Post.findOne({ _id: req.params.id }).then((post) => {
         if (!post) {
             res.status(404).json({ error: new Error("Ce commentaire n'existe pas") });
         }
