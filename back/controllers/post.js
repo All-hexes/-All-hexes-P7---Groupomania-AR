@@ -39,7 +39,7 @@ exports.modifyPost = (req, res, next) => {
                     ),
                 });
             }
-            const filename = sauce.imageUrl.split("/images/")[1];
+            const filename = post.imageUrl.split("/images/")[1];
             fs.unlink(`images/${filename}`, () => {
 
                 const postObject = req.file
