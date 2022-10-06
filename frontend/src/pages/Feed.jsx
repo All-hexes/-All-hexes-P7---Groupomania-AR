@@ -13,6 +13,8 @@ import { useEffect } from "react";
 
 function Feed() {
   const [articles, setArticles] = useState([]);
+  const [createdArticle, setCreatedArticle] = useState(false);
+  const [createdComment, setCreatedComment] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:3000/api/articles/`, {
@@ -35,7 +37,7 @@ function Feed() {
       .catch(function (err) {
         console.error(`Retour du serveur : ${err}`); // Show error if necessary
       });
-  }, [articles]);
+  }, [createdArticle, createdComment]);
 
   return (
     <>
@@ -45,7 +47,10 @@ function Feed() {
           <Profile />
         </div>
         <div className="feed-section">
-          <CreateArticle />
+          <CreateArticle
+            setCreatedArticle={setCreatedArticle}
+            createdArticle={createdArticle}
+          />
           {articles.map((article) => (
             <Article
               key={article._id}
@@ -56,6 +61,8 @@ function Feed() {
               user={article.user[0]}
               likes={article.likes}
               comments={article.comments}
+              setCreatedComment={setCreatedComment}
+              createdComment={createdComment}
             />
           ))}
         </div>

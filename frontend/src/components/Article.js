@@ -4,12 +4,13 @@ import React, { useState } from "react";
 import "../styles/Article.css";
 import profileImage from "../assets/avatar.webp";
 
-const usersImgUrl = process.env.REACT_APP_USERS_IMG_URL;
-const postsImgUrl = process.env.REACT_APP_POSTS_IMG_URL;
+// const usersImgUrl = process.env.REACT_APP_USERS_IMG_URL;
+// const postsImgUrl = process.env.REACT_APP_POSTS_IMG_URL;
+
 
 const currentUser = JSON.parse(window.localStorage.getItem("currentUser"));
 
-function Article(article) {
+function Article({ createdComment, setCreatedComment, ...article }) {
   const [comment, setComment] = useState(false);
   const [options, setOptions] = useState(false);
 
@@ -40,7 +41,7 @@ function Article(article) {
               authorization: "Bearer " + localStorage.getItem("token"),
             },
           }
-        )
+        ).then(function (res) { setCreatedComment(!createdComment) })
         .catch(function (err) {
           console.error(`Retour du serveur : ${err}`);
         });
@@ -139,7 +140,7 @@ function Article(article) {
           <img
             src={
               article.user.profilePicture !== ""
-                ? `${usersImgUrl}` + article.user.profilePicture
+                ? `http://localhost:3000/images/` + article.user.profilePicture
                 : { profileImage }
             }
             className="avatar"
@@ -259,7 +260,7 @@ function Article(article) {
                     <img
                       src={
                         article.imageUrl !== ""
-                          ? `${postsImgUrl}` + article.imageUrl
+                          ? `http://localhost:3000/images/` + article.imageUrl
                           : null
                       }
                       className="new-image"
@@ -311,7 +312,7 @@ function Article(article) {
             <img
               src={
                 article.imageUrl !== ""
-                  ? `${postsImgUrl}` + article.imageUrl
+                  ? `http://localhost:3000/images/` + article.imageUrl
                   : null
               }
               className="img-post"
@@ -359,7 +360,7 @@ function Article(article) {
                       <img
                         src={
                           comment.userProfilePicture !== ""
-                            ? `${usersImgUrl}` + comment.userProfilePicture
+                            ? `http://localhost:3000/images/` + comment.userProfilePicture
                             : profileImage
                         }
                         className="avatar"

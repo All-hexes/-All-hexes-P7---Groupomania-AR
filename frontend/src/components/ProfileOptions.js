@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 
-const usersImgUrl = process.env.REACT_APP_USERS_IMG_URL;
+// const usersImgUrl = process.env.REACT_APP_USERS_IMG_URL;
 
 const currentUser = JSON.parse(window.localStorage.getItem("currentUser"));
 
@@ -74,7 +74,7 @@ function ProfileOptions() {
             className="profile-image"
             src={
               currentUser.profilePicture !== ""
-                ? `${usersImgUrl}` + currentUser.profilePicture
+                ? `http://localhost:3000/images/` + currentUser.profilePicture
                 : profileImage
             }
             alt=""

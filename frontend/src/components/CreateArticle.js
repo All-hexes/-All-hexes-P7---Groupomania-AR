@@ -5,11 +5,11 @@ import "../styles/CreateArticle.css";
 
 import profileImage from "../assets/avatar.webp";
 
-const usersImgUrl = process.env.REACT_APP_USERS_IMG_URL;
+// const usersImgUrl = process.env.REACT_APP_USERS_IMG_URL;
 
 const currentUser = JSON.parse(window.localStorage.getItem("currentUser"));
 
-function CreateArticle() {
+function CreateArticle({ createdArticle, setCreatedArticle }) {
   const [newArticle, setNewArticle] = useState(true);
 
   const [file, setFile] = useState(null);
@@ -29,6 +29,7 @@ function CreateArticle() {
       })
       .then(() => {
         setNewArticle(true);
+        setCreatedArticle(!createdArticle);
       })
       .catch(function (err) {
         console.error(`Retour du serveur : ${err}`);
@@ -41,7 +42,7 @@ function CreateArticle() {
         <img
           src={
             currentUser.profilePicture !== ""
-              ? `${usersImgUrl}` + currentUser.profilePicture
+              ? `http://localhost:3000/images/` + currentUser.profilePicture
               : profileImage
           }
           className="avatar"
@@ -69,7 +70,7 @@ function CreateArticle() {
         <img
           src={
             currentUser.profilePicture !== ""
-              ? `${usersImgUrl}` + currentUser.profilePicture
+              ? `http://localhost:3000/images/` + currentUser.profilePicture
               : profileImage
           }
           className="avatar"

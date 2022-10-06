@@ -3,7 +3,7 @@ import "../styles/Profile.css";
 import coverImage from "../assets/social-media.webp";
 import profileImage from "../assets/avatar.webp";
 
-const usersImgUrl = process.env.REACT_APP_USERS_IMG_URL;
+// const usersImgUrl = process.env.REACT_APP_USERS_IMG_URL;
 
 const currentUser = JSON.parse(window.localStorage.getItem("currentUser"));
 
@@ -27,7 +27,7 @@ function Profile() {
             className="profile-image"
             src={
               currentUser.profilePicture !== ""
-                ? `${usersImgUrl}` + currentUser.profilePicture
+                ? `http://localhost:3000/images/` + currentUser.profilePicture
                 : profileImage
             }
             alt=""
