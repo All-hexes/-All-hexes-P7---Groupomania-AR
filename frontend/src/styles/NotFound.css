@@ -1,0 +1,11 @@
+.page-notfound-container {
+    max-width: 750px;
+    min-height: 100vh;
+    padding: 30px 15px;
+    margin: auto;
+    text-align: center;
+}
+
+.page-notfount-img {
+    width: 100%;
+}
