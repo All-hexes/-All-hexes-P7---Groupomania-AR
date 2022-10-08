@@ -19,17 +19,17 @@ Y88b  d88P 888    Y88..88P Y88b 888 888 d88P Y88..88P 888  888  888 888  888 888
 
 This repository contain the single page application of Groupomania's social network.
 
-// TO RUN
+**TO RUN :**
 
-From the backend directory run :
+From the **backend** directory run :
 
 ### `nodemon server.js`
 
-From the frontend directory run:
+From the **frontend** directory run:
 
 ### `npm start`
 
-// TECH USED :
+**TECH USED :**
 
 Front : CRA + React
 Back : Express Application + MongoDb
