@@ -32,4 +32,5 @@ From the **frontend** directory run:
 **TECH USED :**
 
 Front : CRA + React
+
 Back : Express Application + MongoDb
