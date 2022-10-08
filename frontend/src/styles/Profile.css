@@ -1,6 +1,6 @@
 .profile-container {
   border: 1px solid #e2dddd;
-  border-radius: 10px;
+  border-radius: 12px;
   margin: 15px auto;
   max-width: 600px;
   background-color: #fff;
@@ -12,8 +12,8 @@
   min-width: 100%;
   height: 110px;
   -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
 }
 
 .user-info-container {
@@ -28,7 +28,7 @@
   margin-bottom: 15px;
   border-radius: 50%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 

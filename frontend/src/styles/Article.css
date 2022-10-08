@@ -1,6 +1,6 @@
 .article-post {
   border: 1px solid #e2dddd;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 15px;
   margin: 15px auto;
   max-width: 600px;
@@ -36,7 +36,7 @@
   justify-content: center;
   margin-right: 10px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 
@@ -44,7 +44,7 @@
   width: calc(100% + 0.35px);
   max-height: 500px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .post-description {
@@ -75,9 +75,9 @@
 .post-liked {
   color: rgb(0, 72, 255);
   -webkit-animation-name: liked;
-          animation-name: liked;
+  animation-name: liked;
   -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
+  animation-duration: 300ms;
   transition: all 150ms ease-in-out;
 }
 
@@ -151,7 +151,7 @@
   width: 100%;
   padding: 10px;
   background-color: #f7f7f7;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .user-info {

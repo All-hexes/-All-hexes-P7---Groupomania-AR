@@ -106,10 +106,7 @@ function CreateArticle({ createdArticle, setCreatedArticle }) {
         <div className="container-bottom">
           <div className="add-content">
             <div>
-              <i
-                className="face-smile fa-regular fa-lg fa-face-smile-beam"
-                title="Ajouter des emojis"
-              ></i>
+
             </div>
             <label htmlFor="file">
               <i

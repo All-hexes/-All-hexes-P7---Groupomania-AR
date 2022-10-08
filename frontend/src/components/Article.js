@@ -61,7 +61,7 @@ function Article({ createdComment, setCreatedComment, ...article }) {
               authorization: "Bearer " + localStorage.getItem("token"),
             },
           }
-        )
+        ).then(function (res) { setCreatedComment(!createdComment) })
         .catch(function (err) {
           console.error(`Retour du serveur : ${err}`);
         });
@@ -114,9 +114,10 @@ function Article({ createdComment, setCreatedComment, ...article }) {
       .then(() => {
         setModify(false);
         setOptions(false);
-      })
+      }).then(function (res) { setCreatedComment(!createdComment) })
       .catch(function (err) {
         console.error(`Retour du serveur : ${err}`);
+        console.log(setComment);
       });
   };
 
@@ -127,7 +128,7 @@ function Article({ createdComment, setCreatedComment, ...article }) {
           "Content-Type": "multipart/form-data",
           authorization: "Bearer " + localStorage.getItem("token"),
         },
-      })
+      }).then(function (res) { setCreatedComment(!createdComment) })
       .catch(function (err) {
         console.error(`Retour du serveur : ${err}`);
       });
@@ -272,10 +273,7 @@ function Article({ createdComment, setCreatedComment, ...article }) {
               <div className="container-bottom modify-post-bottom">
                 <div className="add-content">
                   <div>
-                    <i
-                      className="face-smile fa-regular fa-lg fa-face-smile-beam"
-                      title="Ajouter des emojis"
-                    ></i>
+
                   </div>
                   <label htmlFor="file">
                     <i
@@ -337,17 +335,6 @@ function Article({ createdComment, setCreatedComment, ...article }) {
                 )}
                 <span className="likes-comments-qty">{like} J'aime</span>
               </div>
-              <div>
-                <i
-                  className="icon fa-regular fa-lg fa-comment"
-                  onClick={() => {
-                    setComment(true);
-                  }}
-                ></i>
-                <span className="likes-comments-qty">
-                  {article.comments.length} Commentaires
-                </span>
-              </div>
             </div>
             {comment !== false ? (
               <>
@@ -408,7 +395,7 @@ function Article({ createdComment, setCreatedComment, ...article }) {
                   </div>
                 ))}
                 <div className="post-comment">
-                  <i className="face-smile fa-regular fa-lg fa-face-smile-beam"></i>
+
                   <input
                     className="create-comment"
                     placeholder="Ajouter un commentaire..."

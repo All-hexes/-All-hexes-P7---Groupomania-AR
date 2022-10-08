@@ -72,7 +72,7 @@ button:hover {
 .auth-success {
   padding: 15px;
   border: 2px solid green;
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: rgba(157, 239, 159, 0.388);
   color: green;
   width: 100%;
