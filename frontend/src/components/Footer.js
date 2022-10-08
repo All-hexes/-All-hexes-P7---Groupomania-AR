@@ -1,7 +1,5 @@
 import React from "react";
-
 import "../styles/Footer.css";
-
 import logo from "../assets/logo-white.png";
 
 function Footer() {
@@ -15,7 +13,7 @@ function Footer() {
           <div>
             <p>
               Aide :&nbsp;
-              <a href="mailto:support@groupomania.com">
+              <a href="mailto:admin@groupomania.com">
                 admin@groupomania.com
               </a>
             </p>
@@ -25,7 +23,7 @@ function Footer() {
       <div>
         <div>
           <p>
-            © Copyright 2022 | All Rights Reserved
+            © Copyright 2022-23 | All Rights Reserved | Made by CONNECT-E
           </p>
         </div>
       </div>
