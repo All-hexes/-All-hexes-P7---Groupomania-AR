@@ -13,7 +13,6 @@ Y88b  d88P 888    Y88..88P Y88b 888 888 d88P Y88..88P 888  888  888 888  888 888
                                     888                                                            
                                     888</pre>
 
-( School project )
 
 [ Work in progress ]
 
