@@ -18,7 +18,7 @@ This repository contain the single page application of Groupomania's social netw
 
 # TO RUN :
 
-1. Download this repo
+1. Clone this repo
 
 2. Install npm with the command :
 
