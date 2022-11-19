@@ -14,21 +14,21 @@ Y88b  d88P 888    Y88..88P Y88b 888 888 d88P Y88..88P 888  888  888 888  888 888
                                     888</pre>
 
 
-[ Work in progress ]
-
 This repository contain the single page application of Groupomania's social network.
 
 # TO RUN :
 
-1. You will need to install npm with the command :
+1. Download this repo
+
+2. Install npm with the command :
 
 ### `npm install`
 
-2. From the **backend** directory run :
+3. From the **backend** directory run :
 
 ### `nodemon server.js`
 
-3. From the **frontend** directory run:
+4. From the **frontend** directory run:
 
 ### `npm start`
 
