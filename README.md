@@ -32,8 +32,8 @@ This repository contain the single page application of Groupomania's social netw
 
 ### `npm start`
 
-# TECH USED :
+# TECH :
 
-Front : CRA + React
+Front : JS, React, HTML, CSS
 
-Back : Express Application + MongoDB
+Back : Express server App + MongoDB
